@@ -33,16 +33,16 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+\*\*\* Gluay Note
 
-*** Gluay Note
 - npx create-next-app article-next --use-npm
 - npm run dev
 - index.js is Home (import styles from '../styles/Home.module.css)
-- global.css is only imported in _app.js
+- global.css is only imported in \_app.js
 - install ES7 extention
-- rafce 
+- rafce
 - Looks like for the pages won't work if we use lowercase for the file name (about.js -> - About.js)
-- fixed it by using _middleware.js in pages folder
+- fixed it by using \_middleware.js in pages folder
 
 ```
 import { NextResponse } from 'next/server';
@@ -56,3 +56,52 @@ const Middleware = (req) => {
 
 export default Middleware;
 ```
+
+- inline style css
+```
+<style jsx>
+    {`
+        .title {
+            color: red;
+        }
+    `}
+</style>
+```
+- conditional style inline css
+```
+const style = 5
+<style jsx>
+    {`
+        .title {
+            color: ${style > 3 ? 'red' : 'blue'}
+        }
+    `}
+</style>
+```
+- custom Document // Html, Head, Main, NextScript
+- create _document.js 
+- stop the server and run npm run dev again
+This site was built using [Custom Document](https://nextjs.org/docs/advanced-features/custom-document#caveats).
+
+** Fetch Data in index.js
+```
+{articles.map((article) => (
+    <h3>{article.title}</h3>
+))}
+```
+- create pages -> article folder -> [id] folder -> index.js file
+- useRouter 
+```
+import { useRouter } from "next/router"
+
+const article = () => {
+    const router = useRouter()
+    const {id} = router.query
+  return (
+    <div>This is an article {id}</div>
+  )
+}
+
+export default article
+```
+- fallback: false -> return 404 page
