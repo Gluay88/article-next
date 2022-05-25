@@ -44,9 +44,9 @@ rafce
 Looks like for the pages won't work if we use lowercase for the file name (about.js -> About.js)
 fixed it by using _middleware.js in pages folder
 
+```
 import { NextResponse } from 'next/server';
 
-```
 const Middleware = (req) => {
   if (req.nextUrl.pathname === req.nextUrl.pathname.toLowerCase())
     return NextResponse.next();
