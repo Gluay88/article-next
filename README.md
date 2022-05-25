@@ -118,3 +118,7 @@ export default article
 - you get the out folder
 - sudo npm i -g serve
 - serve -s out -p 8000 (serve out folder and port 8000)
+
+# Prisma is an open-source ORM that drastically simplifies data modeling, migrations, and data access for SQL databases in Node. js and TypeScript.
+
+- use data.js
