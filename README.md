@@ -35,14 +35,14 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 
 *** Gluay Note
-npx create-next-app article-next --use-npm
-npm run dev
-index.js is Home (import styles from '../styles/Home.module.css)
-global.css is only imported in _app.js
-install ES7 extention
-rafce 
-Looks like for the pages won't work if we use lowercase for the file name (about.js -> About.js)
-fixed it by using _middleware.js in pages folder
+- npx create-next-app article-next --use-npm
+- npm run dev
+- index.js is Home (import styles from '../styles/Home.module.css)
+- global.css is only imported in _app.js
+- install ES7 extention
+- rafce 
+- Looks like for the pages won't work if we use lowercase for the file name (about.js -> - About.js)
+- fixed it by using _middleware.js in pages folder
 
 ```
 import { NextResponse } from 'next/server';
