@@ -105,3 +105,16 @@ const article = () => {
 export default article
 ```
 - fallback: false -> return 404 page
+
+** Static page
+- package.json file 
+```
+"scripte" : {
+    "build": "next build && next export"
+}
+```
+- then stop the server and run npm run build
+- npm run build
+- you get the out folder
+- sudo npm i -g serve
+- serve -s out -p 8000 (serve out folder and port 8000)
