@@ -5,13 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
-    "start": "next start -p $PORT",
-    "heroku-postbuild": "npm run build",
+    "start": "next start",
     "lint": "next lint"
-  },
-  "engine": {
-    "npm":"8.5.0",
-    "node":"16.14.2"
   },
   "dependencies": {
     "next": "12.1.6",
