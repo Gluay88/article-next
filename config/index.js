@@ -1,3 +1,3 @@
 const dev = process.env.NODE_ENV !== "production";
 
-export const server = dev ? "http://localhost:3000" : "https://article-news-next.herokuapp.com";
+export const server = dev ? "http://localhost:3000" : "http://gluay.com";
